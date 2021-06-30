@@ -1,0 +1,54 @@
+// colors
+
+$main-color: #428a60;
+$second-color: #35734f;
+$third-color: #f8f8f8;
+$border-color: #e4e4e4;
+
+// display width
+
+$display-sm-min: 576px;
+$display-sm-max: $display-sm-min - 1px; 
+$display-md-min: 768px;
+$display-md-max: $display-md-min - 1px; 
+$display-lg-min: 992px;
+$display-lg-max: $display-lg-min - 1px; 
+$display-xl-min: 1200px;
+$display-xl-max: $display-xl-min - 1px; 
+
+// mixins
+
+@mixin font-semi-bold {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@mixin font-bold-header {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@mixin font-bold-footer {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@mixin font-extra-bold-title {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 39px;
+}
+
+@mixin font-extra-bold-main {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16px;
+}

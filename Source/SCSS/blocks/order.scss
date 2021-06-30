@@ -1,0 +1,43 @@
+.order {
+    width: 50%;
+    height: 500px;
+    box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.1);
+
+
+    @media (max-width: $display-lg-max) {
+        width: 100%;
+    }
+
+    @media (max-width: $display-md-max) {
+        box-shadow: none;
+    }
+
+    @media (max-width: $display-sm-max) {
+        height: auto;
+        padding-bottom: 28px;
+    }
+
+    &__title {
+        @include font-extra-bold-title;
+
+        text-align: center;
+        padding: 30px 0;
+        margin: 0;
+        background-color: $third-color;
+        margin-bottom: 30px;
+
+        @media (max-width: $display-md-max) {
+            background-color: #fff;
+        }
+
+        @media (max-width: $display-sm-max) {
+            padding-top: 0;
+            max-width: 305px;
+            margin: 0 auto;
+
+            & br {
+                display: none;
+            }
+        }
+    }
+}

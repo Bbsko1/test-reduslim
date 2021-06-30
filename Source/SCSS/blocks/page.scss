@@ -1,0 +1,11 @@
+.page {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: $display-lg-max) {
+            flex-direction: column;
+        }
+    }
+    
+}

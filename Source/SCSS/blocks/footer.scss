@@ -1,0 +1,27 @@
+.footer {
+    display: none;
+
+    @media (max-width: $display-md-max) {
+        @include font-bold-footer;
+
+        display: flex;
+        background-color: $third-color;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__trusted {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__lock {
+        margin: 0 20px;
+    }
+
+    &__secure {
+        margin: 0;
+        padding: 0;
+    }
+}

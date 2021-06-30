@@ -1,0 +1,117 @@
+.header {
+    width: 50%;
+    padding: 40px 40px 35px;
+    position: relative;
+    height: 500px;
+    background: linear-gradient(180deg, $main-color 0%, $second-color 100%);
+    box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 71px;
+        left: 20px;
+        width: 398px;
+        height: 398px;
+        background-color: $main-color;
+        border-radius: 100%;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 235px;
+        top: -94px;
+        width: 688px;
+        height: 688px;
+        border-radius: 100%;
+        border: 20px solid rgba($color: #ffffff, $alpha: 0.03)
+    }
+
+    @media (max-width: $display-lg-max) {
+        width: 100%;
+    }
+
+    @media (max-width: $display-md-max) {
+        padding: 40px 40px;
+        background: none;
+        height: 430px;
+        box-shadow: none;
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 63vw;
+            min-width: 202px;
+            max-width: 350px;
+            height: 63vw;
+            min-height: 202px;
+            max-height: 350px;
+        }
+    }
+
+    @media (max-width: $display-sm-max) {
+        padding: 40px 20px 70px;
+        height: auto;
+    }
+
+    &__title {
+        @include font-bold-header;
+
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #ffffff;
+
+        @media (max-width: $display-md-max) {
+            flex-direction: row;
+            color: #000000;
+            height: auto;
+        }
+    }
+
+    &__name {
+        &--second-part {
+            text-transform: uppercase;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        bottom: 33px;
+        left: 57px;
+        z-index: 2;
+
+        @media (max-width: $display-md-max) {
+            left: 20%;
+            bottom: 0;
+            top: 30%;
+        }
+
+        @media (max-width: $display-sm-max) {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 70vw;
+            min-width: 223px;
+            max-width: 392px;
+            height: 38vw;
+            min-height: 122px;
+            max-height: 213px;
+            margin-top: 17.5vw;
+            margin-left: 11.25vw;
+        }
+
+        @media (max-width: 319px) {
+            margin-top: 56px;
+            margin-left: 36px;
+        }
+    }
+}
